@@ -8,7 +8,7 @@ const users = require("./routes/api/users");
 const posts = require("./routes/api/posts");
 const accounts = require("./routes/api/accounts");
 const biddingproducts = require("./routes/api/biddingproducts");
-const biddings = require("./routes/api/biddings");
+//const biddings = require("./routes/api/biddings");
 const app = express();
 
 //Body parser middleware
@@ -38,7 +38,7 @@ app.use("/api/users", users);
 app.use("/api/posts", posts);
 app.use("/api/accounts", accounts);
 app.use("/api/biddingproducts", biddingproducts);
-app.use("/api/biddings", biddings);
+//app.use("/api/biddings", biddings);
 
 const port = process.env.PORT || 5000;
 

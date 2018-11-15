@@ -194,10 +194,12 @@ router.post(
       const newBid = {
         bidamount: req.body.bidamount
       };
+      const addbid = account.bid.indexOf(req.params.biddingproduct_id);
 
-      BiddingProduct.findOne({ _id: req.params.biddingproduct_id }).then(() => {
-        account.bid.unshift(newBid);
-      });
+      //add bid
+      account.bid.unshift(newbid);
+      //save
+      account.save().then(account => res.json(account));
     });
   }
 );
